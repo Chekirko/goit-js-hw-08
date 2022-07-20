@@ -13,7 +13,6 @@ refs.form.addEventListener('input', throttle(onFormInput, 500));
 refs.form.addEventListener('submit', onFormSubmit);
 
 function onFormInput(evt) {
-  //   formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
   formData[evt.target.name] = evt.target.value;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
