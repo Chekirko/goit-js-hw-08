@@ -27,9 +27,11 @@ function onFormSubmit(evt) {
 
 function populateForm() {
   const savedData = localStorage.getItem(STORAGE_KEY);
-  if (savedData) {
-    const parsedData = JSON.parse(savedData);
+  const parsedData = JSON.parse(savedData);
+  if (parsedData[refs.input.name]) {
     refs.input.value = parsedData[refs.input.name];
+  }
+  if (parsedData[refs.textarea.name]) {
     refs.textarea.value = parsedData[refs.textarea.name];
   }
 }
