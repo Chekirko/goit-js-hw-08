@@ -40,4 +40,6 @@ function populateForm() {
   }
 }
 
-populateForm();
+if (localStorage.getItem(STORAGE_KEY)) {
+  populateForm();
+}
